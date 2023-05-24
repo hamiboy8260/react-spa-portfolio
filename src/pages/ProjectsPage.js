@@ -20,13 +20,18 @@ export default function ProjectsPage() {
 
   // filter the posts based on tags
   const filteredPosts =
-    searchTerm.trim() === ""
-      ? posts
+    searchTerm.trim() === "" // if the search term is empty
+      ? posts // return all posts
       : posts.filter(
-          (post) =>
-            post.tags &&
-            post.tags.some((tag) =>
-              tag.toLowerCase().includes(searchTerm.toLowerCase())
+          // otherwise, filter the posts
+          (
+            post // if the post has tags
+          ) =>
+            post.tags && // and if any of the tags includes the search term
+            post.tags.some(
+              (
+                tag // (some() methods checks if any of the tags includes the search term)
+              ) => tag.toLowerCase().includes(searchTerm.toLowerCase())
             )
         );
 

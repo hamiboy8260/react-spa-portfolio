@@ -417,7 +417,7 @@ text-decoration: none;
  
   background-image: linear-gradient(to right, var(--brown-gold)  0%,  51%, var(--primary-color) 100%);
   margin-top: 20px;
-  padding: 15px 45px;
+  padding: 15px 20px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
