@@ -36,7 +36,7 @@ export default function ProjectsPage() {
         <h1>PROJECTS</h1>
       </div>
 
-      <form className="search-form">
+      <form className="search-form" onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
           placeholder="Search by tag"

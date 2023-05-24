@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import imgPlaceholder from "../../images/img-placeholder.jpg";
-// import { AiFillCloseCircle } from "react-icons/ai";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function UpdatePage() {
   const params = useParams();
@@ -92,8 +93,9 @@ export default function UpdatePage() {
 
   return (
     <section className="page">
-      <h1>Update "{title}" </h1>
-
+      <div className="text-centerUP">
+        <h1 style={{ marginTop: "0px" }}>Update Post</h1>
+      </div>
       {/* render the success message if isUpdated is true */}
       <form onSubmit={updatePost}>
         <input
@@ -133,7 +135,7 @@ export default function UpdatePage() {
               <div className="tag-item" key={index}>
                 <span className="text">{tag}</span>
                 <span className="close" onClick={() => removeTag(index)}>
-                  {/* <AiFillCloseCircle /> */}
+                  <FontAwesomeIcon icon={faCircleXmark} />
                 </span>
               </div>
             ))}
