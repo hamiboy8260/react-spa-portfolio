@@ -17,7 +17,7 @@ export default function SignInPage({ setAuth }) {
   }
   return (
     <section className="page">
-      <h1>Sign In</h1>
+      <h1 style={{ marginTop: "150px" }}>Sign In</h1>
       <form onSubmit={signIn}>
         <input type="email" name="mail" placeholder="Type your mail" />
         <input
