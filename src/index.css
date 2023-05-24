@@ -1212,7 +1212,7 @@ text-decoration: none;
 
 /********* media queries *********/
 
-@media (max-width:414px) {
+@media (max-width:500px) {
   .hero-img-div{
     background-position: 90%;
   }
