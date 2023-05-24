@@ -27,18 +27,20 @@ export default function AboutPage() {
             Learn more about me, myself and I
           </span>
           <p>
-            I am Hamid Pardesyar, born in 1996. I origins from Afghanistan but
-            have been living in Denmark since the age of six. In my spare time,
-            I enjoy playing football, going for walks, and spending time with
-            friends and family. As an active person, I strive for both
-            professional and social engagement and participate in various
-            leisure activities with a committed approach. My curiosity and
-            passion for web development drive me, and I love exploring different
-            technologies and web design. I am constantly motivated to learn and
-            improve my skills, both personally and professionally, and I always
-            strive to be the best version of myself. I am ready to take on new
-            challenges and believe that constant improvement is the key to
-            success.
+            My name is Hamid Pardesyar, and I was born in 1996. I am originally
+            from Afghanistan, but have been residing in Denmark since the age of
+            six. During my spare time, I enjoy activities such as playing
+            football, taking walks, and spending quality time with my friends
+            and family. I actively seek opportunities for personal and
+            professional growth, and I accomplish my goals with dedication and
+            enthusiasm. I have a big interest in web development and have a
+            strong curiosity that drives me to explore various technologies and
+            web design concepts. I am deeply motivated to continuously enhance
+            my skills and knowledge in this field. Striving for excellence, I am
+            committed to ongoing self-improvement both personally and
+            professionally. I am always prepared to embrace new challenges as I
+            believe that consistent growth and development are fundamental to
+            achieving success.
           </p>
         </div>
         <div className="about-image">
