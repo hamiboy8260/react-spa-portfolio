@@ -691,6 +691,8 @@ text-decoration: none;
   grid-template-columns: 1fr 1fr;
   gap: 1.5em;
   margin-top: 2.5em;
+  text-align: left;
+  
 }
 
 .post-detail img {
