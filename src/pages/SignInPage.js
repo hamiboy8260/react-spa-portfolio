@@ -4,11 +4,11 @@ export default function SignInPage({ setAuth }) {
   const [errorMessage, setErrorMessage] = useState("");
 
   function signIn(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent the page from reloading
     const mail = event.target.mail.value; // mail value from input field in sign in form
     const password = event.target.password.value; // password value from inout field in sign in form
 
-    if (mail === "admin@mail.dk" && password === "admin1234") {
+    if (mail === "admin@live.dk" && password === "admin123") {
       setAuth(true);
       localStorage.setItem("isAuth", true); // set localStorage
     } else {

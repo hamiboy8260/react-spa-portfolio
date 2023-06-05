@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function UpdatePage() {
   const params = useParams();
-  const url = `https://react-portfolio-spa-default-rtdb.firebaseio.com/posts/${params.id}.json`;
+  const url = `https://react-portfolio-spa-default-rtdb.firebaseio.com/posts/${params.id}.json`; // url to fetch the specific post to be updated
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -40,15 +40,10 @@ export default function UpdatePage() {
   async function updatePost(event) {
     event.preventDefault(); // prevent the page from reloading
 
-    // if (!title.trim() || !description.trim()) {
-    //   setErrorMessage("Title and description cannot be empty");
-    //   return;
-    // }
-
     if (!title || !description) {
       setErrors({
-        title: !title ? "Title is required" : "",
-        description: !description ? "Description is required" : "",
+        title: !title ? "Title is required" : "", // if title is empty, set the error message
+        description: !description ? "Description is required" : "", // if description is empty, set the error message
       });
       return;
     }
@@ -63,8 +58,8 @@ export default function UpdatePage() {
     };
 
     const response = await fetch(url, {
-      method: "PUT",
-      body: JSON.stringify(postToUpdate),
+      method: "PUT", // PUT request to update data
+      body: JSON.stringify(postToUpdate), // the data to be updated, needs to be converted to JSON format
     });
     if (response.ok) {
       setSuccessMessage("Post updated successfully!");

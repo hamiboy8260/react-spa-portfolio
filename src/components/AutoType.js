@@ -9,9 +9,9 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import CV from "../pdf/CV.pdf";
 
 function AutoType() {
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // currentPhraseIndex is used to keep track of the current phrase in the phrases array
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0); // currentLetterIndex is used to keep track of the current letter in the current phrase
+  const [currentText, setCurrentText] = useState(""); // currentText is used to keep track of the current text to be displayed
   const phrases = useMemo(
     () => ["web developer", "webdesigner", "frontend enthusiast"],
     []
@@ -41,9 +41,9 @@ function AutoType() {
   }, [currentLetterIndex, currentPhraseIndex, phrases]);
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = CV;
-    link.download = "CV.pdf";
+    const link = document.createElement("a"); // create a new link element with a tag
+    link.href = CV; // set the href attribute of the link to the CV import
+    link.download = "CV.pdf"; // set the download attribute of the link to the name of the file
     link.click();
   };
 

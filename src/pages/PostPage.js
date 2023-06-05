@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function PostPage({ isAuth }) {
   const [post, setPost] = useState([]);
   const params = useParams();
-  const url = `https://react-portfolio-spa-default-rtdb.firebaseio.com/posts/${params.id}.json`;
+  const url = `https://react-portfolio-spa-default-rtdb.firebaseio.com/posts/${params.id}.json`; // url to fetch the specific post
   const navigate = useNavigate();
 
   // the side effect - fetch post
@@ -26,7 +26,7 @@ export default function PostPage({ isAuth }) {
     );
     if (confirmed) {
       fetch(url, {
-        method: "DELETE",
+        method: "DELETE", // DELETE request to delete the post
       }).then(() => {
         navigate("/projects");
       });

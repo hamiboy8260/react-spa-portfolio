@@ -38,8 +38,8 @@ export default function CreatePage() {
     const response = await fetch(
       "https://react-portfolio-spa-default-rtdb.firebaseio.com/posts.json",
       {
-        method: "POST",
-        body: JSON.stringify(newPost),
+        method: "POST", // POST request to add data
+        body: JSON.stringify(newPost), // the data to be added, needs to be converted to JSON format
       }
     );
     if (response.ok) {
