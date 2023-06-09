@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="My portfolio build with react" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      async
+    />
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -36,14 +43,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script async>
-      function loadCSS(url) {
-        var link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = url;
-        document.body.appendChild(link);
-      }
-      loadCSS("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css");
-    </script>
   </body>
 </html>
