@@ -36,14 +36,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
-    <!-- AOS css elements can be fetched and loaded in parrallel with other ressource of the page -->
-    <script>
+    <script async>
       function loadCSS(url) {
         var link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = url;
-        document.head.appendChild(link);
+        document.body.appendChild(link);
       }
       loadCSS("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css");
     </script>
