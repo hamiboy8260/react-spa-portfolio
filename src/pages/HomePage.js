@@ -86,7 +86,7 @@ export default function HomePage() {
           </div>
           <div className="webdev-icons">
             <i>
-              <img src={mySql} alt="mysqlimg" />
+              <img src={mySql} alt="mysqlimg" height="80" width="80" />
             </i>
             <i>{<FontAwesomeIcon icon={faJs} />}</i>
             <i>{<FontAwesomeIcon icon={faCss3Alt} />}</i>
@@ -97,17 +97,19 @@ export default function HomePage() {
                 src={tailwindcss}
                 className="tailwindcss-svg"
                 alt="aboutimg"
+                height="80"
+                width="80"
               />
             </i>
             <i>{<FontAwesomeIcon icon={faHtml5} />}</i>
             <i>{<FontAwesomeIcon icon={faGithub} />}</i>
             <i>
-              <img src={pwa} alt="pwa" />
+              <img src={pwa} alt="pwa" height="80" width="80" />
             </i>
             <i>{<FontAwesomeIcon icon={faFigma} />}</i>
             <i>{<FontAwesomeIcon icon={faWordpress} />}</i>
             <i>
-              <img src={mongoDb} alt="mongodb" />
+              <img src={mongoDb} alt="mongodb" height="80" width="80" />
             </i>
           </div>
         </div>

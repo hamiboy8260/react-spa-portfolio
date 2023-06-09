@@ -42,7 +42,13 @@ export default function Nav() {
   return (
     <nav className={`${navClass} ${linkClass}`}>
       <NavLink to="/" className="logo-link">
-        <img src={Logo} alt="Logo" className="logo-image" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="logo-image"
+          height="30"
+          width="30"
+        />
       </NavLink>
       <div className="burgerBar" onClick={handleClick}>
         {clicked ? (

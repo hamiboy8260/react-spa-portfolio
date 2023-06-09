@@ -148,11 +148,11 @@ nav a {
     
 }
 
-.logo-image {
+/* .logo-image {
   width: 30px;
   height: 30px;
     
-}
+} */
 
 /* remove a.active from logo */
 .logo-link.active {
@@ -1341,6 +1341,8 @@ text-decoration: none;
    text-align: left !important; 
    margin: 5px !important;
   }
+
+ 
 
  .about-section-top{
    width: 100%;
