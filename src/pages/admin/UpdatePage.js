@@ -35,7 +35,7 @@ export default function UpdatePage() {
       }
     }
     getPost(); // call the function
-  }, [url]); // empty array as second argument to run the function only once
+  }, [url]);
 
   async function updatePost(event) {
     event.preventDefault(); // prevent the page from reloading
