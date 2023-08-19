@@ -123,7 +123,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="text-center" data-aos="fade-up">
+      {/* <div className="text-center" data-aos="fade-up">
         <div class="about-wave">
           <svg
             data-name="Layer 1"
@@ -148,7 +148,7 @@ export default function AboutPage() {
           </svg>
         </div>
         <h1>Education</h1>
-      </div>
+      </div> */}
       {/* <div className="timeline">
         <div className="timeline-item left" data-aos="fade-up">
           <div className="timeline-content">
@@ -172,7 +172,7 @@ export default function AboutPage() {
           <div className="timeline-content">
             <h2>Multimedia design degree</h2>
             <p>
-              I have completed the multimedia design education at the business
+              I have completed the datamatiker education at the business
               academy Aarhus.
             </p>
             <span className="date">January, 2022</span>
