@@ -6,7 +6,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import CV from "../pdf/CV-webudvikling.pdf";
+import CV from "../pdf/";
 
 function AutoType() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // currentPhraseIndex is used to keep track of the current phrase in the phrases array
