@@ -149,7 +149,7 @@ export default function AboutPage() {
         </div>
         <h1>Education</h1>
       </div>
-      <div className="timeline">
+      {/* <div className="timeline">
         <div className="timeline-item left" data-aos="fade-up">
           <div className="timeline-content">
             <h2>Primary school</h2>
@@ -188,7 +188,7 @@ export default function AboutPage() {
             <span className="date">currently</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
