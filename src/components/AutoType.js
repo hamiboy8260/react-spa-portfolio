@@ -5,7 +5,7 @@ import {
   faLinkedin,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+// import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import CV from "../pdf/";
 
 function AutoType() {
@@ -79,9 +79,9 @@ function AutoType() {
               </span>
             </div>
           </div>
-          <button className="hero-btn" onClick={handleDownload}>
+          {/* <button className="hero-btn" onClick={handleDownload}>
             download cv <FontAwesomeIcon icon={faDownload} size="lg" />
-          </button>
+          </button> */}
           <div className="social-links-hero">
             <a
               href="https://github.com/hamiboy8260"
