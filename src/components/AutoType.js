@@ -41,10 +41,10 @@ function AutoType() {
   }, [currentLetterIndex, currentPhraseIndex, phrases]);
 
   const handleDownload = () => {
-    const link = document.createElement("a"); // create a new link element with a tag
-    link.href = CV; // set the href attribute of the link to the CV import
-    link.download = ""; // set the download attribute of the link to the name of the file
-    link.click();
+    // const link = document.createElement("a"); // create a new link element with a tag
+    // link.href = CV; // set the href attribute of the link to the CV import
+    // link.download = ""; // set the download attribute of the link to the name of the file
+    // link.click();
   };
 
   return (
