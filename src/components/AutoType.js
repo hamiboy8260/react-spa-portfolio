@@ -5,8 +5,8 @@ import {
   faLinkedin,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-// import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import CV from "../pdf/";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import CV from "../pdf/CV-webudvikling.pdf";
 
 function AutoType() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // currentPhraseIndex is used to keep track of the current phrase in the phrases array
@@ -41,10 +41,10 @@ function AutoType() {
   }, [currentLetterIndex, currentPhraseIndex, phrases]);
 
   const handleDownload = () => {
-    // const link = document.createElement("a"); // create a new link element with a tag
-    // link.href = CV; // set the href attribute of the link to the CV import
-    // link.download = ""; // set the download attribute of the link to the name of the file
-    // link.click();
+    const link = document.createElement("a"); // create a new link element with a tag
+    link.href = CV; // set the href attribute of the link to the CV import
+    link.download = ""; // set the download attribute of the link to the name of the file
+    link.click();
   };
 
   return (
@@ -79,9 +79,9 @@ function AutoType() {
               </span>
             </div>
           </div>
-          {/* <button className="hero-btn" onClick={handleDownload}>
+          <button className="hero-btn" onClick={handleDownload}>
             download cv <FontAwesomeIcon icon={faDownload} size="lg" />
-          </button> */}
+          </button>
           <div className="social-links-hero">
             <a
               href="https://github.com/hamiboy8260"
