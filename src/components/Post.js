@@ -21,9 +21,9 @@ export default function Post({ post }) {
   return (
     <article onClick={handleClick}>
       <h2>{post.title}</h2>
-      <img src={post.image} alt={post.title} />
+      {post.image && <img src={post.image} alt={post.title} />}{" "}
+      {/* Display the image if it exists */}
       <p>{shortendDescription}</p>
-
       <div className="post-links">
         {post.gitHubLink && (
           <a

@@ -66,6 +66,22 @@ export default function CreatePage() {
     setTags(tags.filter((del, i) => i !== index));
   }
 
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    // You can perform validation on the uploaded file here
+    setImage(file);
+
+    // Display a preview of the uploaded image
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const previewImage = e.target.result;
+        document.querySelector(".image-preview").src = previewImage;
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <section className="page">
       <div className="text-centerCP">
@@ -120,7 +136,7 @@ export default function CreatePage() {
             placeholder="Press enter to add tags"
           />
         </div>
-        <input
+        {/* <input
           type="url"
           value={image}
           placeholder="Image url"
@@ -131,6 +147,17 @@ export default function CreatePage() {
           src={image}
           alt="choose"
           onError={(event) => (event.target.src = imgPlaceholder)}
+        /> */}
+
+        <input
+          type="file"
+          accept="image/*" // Limit to image file types
+          onChange={handleImageUpload}
+        />
+        <img
+          className="image-preview"
+          src={image ? URL.createObjectURL(image) : imgPlaceholder}
+          alt="choose"
         />
 
         <button>Save</button>

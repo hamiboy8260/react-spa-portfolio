@@ -6,7 +6,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import CV from "../pdf/CV-webudvikling.pdf";
+import CV from "../pdf/CV-Hamid Pardesyar.pdf";
 
 function AutoType() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0); // currentPhraseIndex is used to keep track of the current phrase in the phrases array
@@ -43,7 +43,7 @@ function AutoType() {
   const handleDownload = () => {
     const link = document.createElement("a"); // create a new link element with a tag
     link.href = CV; // set the href attribute of the link to the CV import
-    link.download = ""; // set the download attribute of the link to the name of the file
+    link.download = "CV-Hamid Pardesyar.pdf"; // set the download attribute of the link to the name of the file
     link.click();
   };
 
