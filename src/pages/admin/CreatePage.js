@@ -9,6 +9,7 @@ export default function CreatePage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  // const [image, setImage] = useState(null);
   const [gitHubLink, setGitHubLink] = useState("");
   const [liveLink, setLiveLink] = useState("");
   const [errors, setErrors] = useState({});
@@ -30,6 +31,7 @@ export default function CreatePage() {
       title: title,
       description: description,
       image: image || imgPlaceholder,
+      // image: image ? URL.createObjectURL(image) : imgPlaceholder,
       gitHubLink: gitHubLink,
       liveLink: liveLink,
       tags: tags,
@@ -66,21 +68,12 @@ export default function CreatePage() {
     setTags(tags.filter((del, i) => i !== index));
   }
 
-  const handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    // You can perform validation on the uploaded file here
-    setImage(file);
-
-    // Display a preview of the uploaded image
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const previewImage = e.target.result;
-        document.querySelector(".image-preview").src = previewImage;
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  // function handleImageUpload(event) {
+  //   const uploadedImage = event.target.files[0];
+  //   if (uploadedImage) {
+  //     setImage(uploadedImage);
+  //   }
+  // }
 
   return (
     <section className="page">
@@ -136,7 +129,7 @@ export default function CreatePage() {
             placeholder="Press enter to add tags"
           />
         </div>
-        {/* <input
+        <input
           type="url"
           value={image}
           placeholder="Image url"
@@ -147,18 +140,16 @@ export default function CreatePage() {
           src={image}
           alt="choose"
           onError={(event) => (event.target.src = imgPlaceholder)}
-        /> */}
+        />
 
-        <input
-          type="file"
-          accept="image/*" // Limit to image file types
-          onChange={handleImageUpload}
-        />
-        <img
-          className="image-preview"
-          src={image ? URL.createObjectURL(image) : imgPlaceholder}
-          alt="choose"
-        />
+        {/* <input type="file" accept="image/*" onChange={handleImageUpload} />
+        {image && (
+          <img
+            className="image-preview"
+            src={URL.createObjectURL(image)} // create a temporary URL for the image
+            alt="Preview"
+          />
+        )} */}
 
         <button>Save</button>
         {successMessage && <p className="success-msg">{successMessage}</p>}

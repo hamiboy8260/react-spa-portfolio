@@ -52,6 +52,7 @@ export default function UpdatePage() {
       title: title,
       description: description,
       image: image,
+      // image: image ? URL.createObjectURL(image) : imgPlaceholder,
       gitHubLink: gitHubLink,
       liveLink: liveLink,
       tags: tags,
@@ -85,6 +86,13 @@ export default function UpdatePage() {
     // remove the tag from the tags array
     setTags(tags.filter((del, i) => i !== index));
   }
+
+  // function handleImageUpload(event) {
+  //   const uploadedImage = event.target.files[0];
+  //   if (uploadedImage) {
+  //     setImage(uploadedImage);
+  //   }
+  // }
 
   return (
     <section className="page">
@@ -155,6 +163,14 @@ export default function UpdatePage() {
           onError={(event) => (event.target.src = imgPlaceholder)}
         />
 
+        {/* <input type="file" accept="image/*" onChange={handleImageUpload} />
+        {image && (
+          <img
+            className="image-preview"
+            src={URL.createObjectURL(image)} // create a temporary URL for the image
+            alt="Preview"
+          />
+        )} */}
         <button type="submit">Update</button>
         {successMessage && <p className="success-msg">{successMessage}</p>}
         {/* {errorMessage && <p className="error-msg">{errorMessage}</p>} */}

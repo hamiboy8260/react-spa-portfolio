@@ -18,6 +18,7 @@ export default function Post({ post }) {
     event.stopPropagation(); // stop the event from bubbling up to the parent element
   }
 
+  console.log(post.image);
   return (
     <article onClick={handleClick}>
       <h2>{post.title}</h2>
