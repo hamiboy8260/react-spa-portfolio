@@ -1,5 +1,5 @@
 import aboutImg from "../images/Programming-amico.svg";
-import pbbillede from "../images/pbbillede.webp";
+import pbbillede from "../images/pbbillede.jpeg";
 import { useEffect } from "react";
 import AOS from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
