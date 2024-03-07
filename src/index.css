@@ -1028,6 +1028,23 @@ box-shadow: -12px 10px 0px 4px rgba(178,143,99,1);
   color: #999;
 } */
 
+.vertical-timeline-element-title{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+
+.vertical-timeline-element-subtitle{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--textcolor-grey);
+}
+
+.vertical-timeline-element-content{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--textcolor-grey);
+}
 
 
 .back-to-top-button {

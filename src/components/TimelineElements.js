@@ -33,7 +33,7 @@ let timelineElements = [
     location: "Aarhus, Denmark",
     description:
       "Currently finishing my Bachelor's degree in Web Development at the Business Academy Aarhus",
-    date: "July, 2023",
+    date: "June, 2023",
     icon: "school",
   },
 ];
