@@ -968,7 +968,7 @@ box-shadow: -12px 10px 0px 4px rgba(178,143,99,1);
 }
 
 /* timeline style */
-.timeline {
+/* .timeline {
   position: relative;
   width: 90%;
   margin: 0 auto;
@@ -1026,7 +1026,9 @@ box-shadow: -12px 10px 0px 4px rgba(178,143,99,1);
   right: 5px;
   font-size: 14px;
   color: #999;
-}
+} */
+
+
 
 .back-to-top-button {
   position: fixed;

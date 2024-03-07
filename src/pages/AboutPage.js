@@ -4,6 +4,13 @@ import { useEffect } from "react";
 import AOS from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import SchoolIcon from "../icons/school.svg";
+import timelineElements from "../components/TimelineElements";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -27,20 +34,18 @@ export default function AboutPage() {
             Learn more about me, myself and I
           </span>
           <p>
-            My name is Hamid Pardesyar, and I was born in 1996. I am originally
-            from Afghanistan, but have been residing in Denmark since the age of
-            six. During my spare time, I enjoy activities such as playing
-            football, taking walks, and spending quality time with my friends
-            and family. I actively seek opportunities for personal and
-            professional growth, and I accomplish my goals with dedication and
-            enthusiasm. I have a big interest in web development and have a
-            strong curiosity that drives me to explore various technologies and
-            web design concepts. I am deeply motivated to continuously enhance
-            my skills and knowledge in this field. Striving for excellence, I am
-            committed to ongoing self-improvement both personally and
-            professionally. I am always prepared to embrace new challenges as I
-            believe that consistent growth and development are fundamental to
-            achieving success.
+            My name is Hamid Pardesyar, and I was born in 1996. During my spare
+            time, I enjoy activities such as playing football, taking walks, and
+            spending quality time with my friends and family. I actively seek
+            opportunities for personal and professional growth, and I accomplish
+            my goals with dedication and enthusiasm. I have a big interest in
+            web development and have a strong curiosity that drives me to
+            explore various technologies and web design concepts. I am deeply
+            motivated to continuously enhance my skills and knowledge in this
+            field. Striving for excellence, I am committed to ongoing
+            self-improvement both personally and professionally. I am always
+            prepared to embrace new challenges as I believe that consistent
+            growth and development are fundamental to achieving success.
           </p>
         </div>
         <div className="about-image">
@@ -149,7 +154,50 @@ export default function AboutPage() {
         </div>
         <h1>Education</h1>
       </div>
-      <div className="timeline">
+
+      <VerticalTimeline lineColor="#593030">
+        {timelineElements.map((element) => {
+          return (
+            <VerticalTimelineElement
+              contentStyle={{
+                background: "white",
+                boxShadow: "0px 0px 25px 10px rgba(0, 0, 0, 0.07)",
+                borderRadius: "5px",
+              }}
+              contentArrowStyle={{
+                borderRight: "10px solid white",
+              }}
+              key={element.id}
+              date={element.date}
+              dateClassName="date"
+              iconStyle={{
+                background: "#b28f63",
+                fill: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              icon={
+                <img
+                  src={SchoolIcon}
+                  alt="school"
+                  style={{ height: "30px", width: "30px", fill: "white" }}
+                />
+              }
+            >
+              <h3 className="vertical-timeline-element-title">
+                {element.title}
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                {element.location}
+              </h4>
+              <p>{element.description}</p>
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
+
+      {/* <div className="timeline">
         <div className="timeline-item left" data-aos="fade-up">
           <div className="timeline-content">
             <h2>Primary school</h2>
@@ -188,7 +236,7 @@ export default function AboutPage() {
             <span className="date">currently</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
